@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FormControl, MenuItem, Select } from '@material-ui/core';
+import InfoBox from './InfoBox';
 import './App.css';
 
 function App() {
@@ -10,8 +11,6 @@ function App() {
 
     // state = HOW TO WRITE A VARIABLE IN REACT
     // useEffect = Runs a piece of code based on a given condition
-
-    // https://disease.sh/v3/covid-19/countries
 
     useEffect(() => {
         // empty [] in second parameter means code inside here will run once when the component loads not again
@@ -59,11 +58,16 @@ function App() {
                 </FormControl>
             </div>
 
+            <div className="app__stats">
+                {/* Infobox title = "Coronavirus Cases" */}
+                <InfoBox title="Coronavirus Cases" cases={525} total={2000} />
 
+                {/* Infobox title = "Coronavirus Recoveries" */}
+                <InfoBox title="Recovered" cases={5256} total={3000} />
 
-            {/* Infobox */}
-            {/* Infobox */}
-            {/* Infobox */}
+                {/* Infobox */}
+                <InfoBox title="Deaths" cases={52} total={300} />
+            </div>
 
 
             {/* Table */}
